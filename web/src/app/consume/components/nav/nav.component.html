@@ -1,5 +1,5 @@
 <p>
-  <mat-toolbar color="primary">
+  <mat-toolbar style="background-color: rgb(13, 92, 99);">
     <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
       <mat-icon>menu</mat-icon>
     </button>
@@ -13,7 +13,7 @@
       <mat-icon>share</mat-icon>
     </button>
 
-    <a mat-button *ngFor="let option of options"
-       [routerLink]="option.path">{{ option.title }}</a>
+    <a mat-button *ngFor="let option of options" [routerLink]="option.path"  [class.separate-button]="option.title === 'Sesiones' || option.title === 'Perfil'"style="font-size: {{ option.fontSize }}px;">{{ option.title }}</a>
+
   </mat-toolbar>
 </p>

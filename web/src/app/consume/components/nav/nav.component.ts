@@ -6,12 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./nav.component.css']
 })
 export class NavComponent {
-  title = 'Consume API';
-
+  title = 'TutorsMe';
   options = [
-    { path: '/home', title: 'Home'},
-    { path: '/consume/newsapi', title: 'News Api'},
-    { path: '/schedule/appointment', title: 'Appointment'},
-    { path: '/about', title: 'About'}
-  ]
+    { path: '/home', title: 'Inicio', fontSize: 20 }, 
+    { path: '/consume/newsapi', title: 'Profesores', fontSize: 20 },
+    { path: '/home', title: 'Buscador', fontSize: 20 },
+    { path: '/schedule/appointment', title: 'Sesiones', fontSize: 20 },
+    { path: '/about', title: 'Perfil', fontSize: 20 }
+  ];
 }
+
+
