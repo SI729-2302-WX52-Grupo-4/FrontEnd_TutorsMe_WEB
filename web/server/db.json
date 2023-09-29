@@ -1,0 +1,50 @@
+{
+  "appointments" : [
+    {
+      "id": 1,
+      "studentCode": "202015236",
+      "teacherCode": 8965,
+      "dateTime": "2020-11-16T04:25:03-05:00",
+      "subject": "Retiro de curso"
+    },
+    {
+      "id": 2,
+      "studentCode": "201912785",
+      "teacherCode": 10236,
+      "dateTime": "2023-09-16T11:25:00-05:00",
+      "subject": "Traslado interno"
+    }
+  ],
+  "students": [
+    {
+      "id": 1,
+      "name": "John Doe",
+      "age": 25,
+      "address": "Jr. Nowhere"
+    },
+    {
+      "id": 2,
+      "name": "Jason Bourne Sucket",
+      "age": 34,
+      "address": "Av. Canada 1598"
+    },
+    {
+      "id": 3,
+      "name": "William Norton",
+      "age": 38,
+      "address": "One Secret Place"
+    },
+    {
+      "name": "Rosa Flores",
+      "age": 21,
+      "address": "Av. Lima 158",
+      "id": 4
+    },
+    {
+      "name": "Maria Rosales Vasquez",
+      "age": 34,
+      "address": "Av. Arequipa 1258",
+      "id": 5
+    }
+  ]
+}
