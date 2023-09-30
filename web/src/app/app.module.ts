@@ -14,6 +14,11 @@ import {MatTableModule} from '@angular/material/table';
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {MatInputModule} from "@angular/material/input";
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatCardModule} from '@angular/material/card';
+import {MatNativeDateModule} from '@angular/material/core';
+
+
 import { FooterContentComponent } from './consume/components/footer-content/footer-content.component';
 import { MainContentComponent } from './consume/components/main-content/main-content.component';
 import { NavComponent } from './consume/components/nav/nav.component';
@@ -23,6 +28,8 @@ import { PageNotFoundComponent } from './public/pages/page-not-found/page-not-fo
 import {AppointmentsService} from "./schedule/services/appointments.service";
 import { AppointmentsComponent } from './schedule/pages/appointments/appointments.component';
 import { AppointmentFormComponent } from './schedule/components/appointment-form/appointment-form.component';
+import { CalendarComponent } from './Inicio/components/calendar/calendar.component';
+import { CardComponent } from './inicio/components/card/card.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +41,8 @@ import { AppointmentFormComponent } from './schedule/components/appointment-form
     HomeComponent,
     PageNotFoundComponent,
     AppointmentsComponent,
-    AppointmentFormComponent
+    AppointmentFormComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,
@@ -48,7 +56,11 @@ import { AppointmentFormComponent } from './schedule/components/appointment-form
     MatTableModule,
     MatFormFieldModule,
     FormsModule,
-    MatInputModule
+    MatInputModule,
+    MatCardModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    CalendarComponent
   ],
   providers: [AppointmentsService],
   bootstrap: [AppComponent]
