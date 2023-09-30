@@ -1,0 +1,376 @@
+Index: web/src/app/public/pages/home/home.component.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><p>Welcome to Consume API</p>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/web/src/app/public/pages/home/home.component.html b/web/src/app/public/pages/home/home.component.html
+--- a/web/src/app/public/pages/home/home.component.html	(revision 0f1a9e3bff1a3dec017798cabd391c8381a9de5f)
++++ b/web/src/app/public/pages/home/home.component.html	(date 1696052963042)
+@@ -1,1 +1,5 @@
+-<p>Welcome to Consume API</p>
++<section>
++  <app-calendar></app-calendar>
++  <app-card></app-card>
++</section>
++
+Index: web/server/db.json
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>{\r\n  \"appointments\" : [\r\n    {\r\n      \"id\": 1,\r\n      \"studentCode\": \"202015236\",\r\n      \"teacherCode\": 8965,\r\n      \"dateTime\": \"2020-11-16T04:25:03-05:00\",\r\n      \"subject\": \"Retiro de curso\"\r\n    },\r\n    {\r\n      \"id\": 2,\r\n      \"studentCode\": \"201912785\",\r\n      \"teacherCode\": 10236,\r\n      \"dateTime\": \"2023-09-16T11:25:00-05:00\",\r\n      \"subject\": \"Traslado interno\"\r\n    }\r\n  ],\r\n  \"students\": [\r\n    {\r\n      \"id\": 1,\r\n      \"name\": \"John Doe\",\r\n      \"age\": 25,\r\n      \"address\": \"Jr. Nowhere\"\r\n    },\r\n    {\r\n      \"id\": 2,\r\n      \"name\": \"Jason Bourne Sucket\",\r\n      \"age\": 34,\r\n      \"address\": \"Av. Canada 1598\"\r\n    },\r\n    {\r\n      \"id\": 3,\r\n      \"name\": \"William Norton\",\r\n      \"age\": 38,\r\n      \"address\": \"One Secret Place\"\r\n    },\r\n    {\r\n      \"name\": \"Rosa Flores\",\r\n      \"age\": 21,\r\n      \"address\": \"Av. Lima 158\",\r\n      \"id\": 4\r\n    },\r\n    {\r\n      \"name\": \"Maria Rosales Vasquez\",\r\n      \"age\": 34,\r\n      \"address\": \"Av. Arequipa 1258\",\r\n      \"id\": 5\r\n    }\r\n  ]\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/web/server/db.json b/web/server/db.json
+--- a/web/server/db.json	(revision 0f1a9e3bff1a3dec017798cabd391c8381a9de5f)
++++ b/web/server/db.json	(date 1696053206396)
+@@ -46,5 +46,21 @@
+       "address": "Av. Arequipa 1258",
+       "id": 5
+     }
++  ],
++  "classes" : [
++    {
++      "id": 1,
++      "studentCode": "00000002",
++      "teacherCode": "T1010",
++      "dateTime": "2020-11-14T04:25:03-07:00",
++      "subject": "Matemática Computacional"
++    },
++    {
++      "id": 2,
++      "studentCode": "0000001",
++      "teacherCode": "T1023",
++      "dateTime": "2023-09-20T11:25:00-10:00",
++      "subject": "Introducción al derecho"
++    }
+   ]
+ }
+Index: web/src/app/public/pages/home/home.component.css
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/web/src/app/public/pages/home/home.component.css b/web/src/app/public/pages/home/home.component.css
+--- a/web/src/app/public/pages/home/home.component.css	(revision 0f1a9e3bff1a3dec017798cabd391c8381a9de5f)
++++ b/web/src/app/public/pages/home/home.component.css	(date 1696052983869)
+@@ -1,0 +1,3 @@
++.section{
++  justify-content: center;
++}
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+new file mode 100644
+--- /dev/null	(date 1696006708664)
++++ b/.idea/misc.xml	(date 1696006708664)
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="ProjectRootManager">
++    <output url="file://$PROJECT_DIR$/out" />
++  </component>
++</project>
+\ No newline at end of file
+Index: .idea/vcs.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/vcs.xml b/.idea/vcs.xml
+new file mode 100644
+--- /dev/null	(date 1696006708618)
++++ b/.idea/vcs.xml	(date 1696006708618)
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="VcsDirectoryMappings">
++    <mapping directory="" vcs="Git" />
++  </component>
++</project>
+\ No newline at end of file
+Index: .idea/modules.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/modules.xml b/.idea/modules.xml
+new file mode 100644
+--- /dev/null	(date 1696006708571)
++++ b/.idea/modules.xml	(date 1696006708571)
+@@ -0,0 +1,8 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="ProjectModuleManager">
++    <modules>
++      <module fileurl="file://$PROJECT_DIR$/.idea/TutorsMe_WEB.iml" filepath="$PROJECT_DIR$/.idea/TutorsMe_WEB.iml" />
++    </modules>
++  </component>
++</project>
+\ No newline at end of file
+Index: web/src/app/Inicio/model/class.entity.ts
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/web/src/app/Inicio/model/class.entity.ts b/web/src/app/Inicio/model/class.entity.ts
+new file mode 100644
+--- /dev/null	(date 1696048960213)
++++ b/web/src/app/Inicio/model/class.entity.ts	(date 1696048960213)
+@@ -0,0 +1,15 @@
++export class Class {
++  id: number;
++  studentCode: string;
++  teacherCode: string;
++  dateTime: string;
++  subject: string;
++
++  constructor() {
++    this.id = 0;
++    this.studentCode = '';
++    this.teacherCode = '';
++    this.dateTime = '';
++    this.subject = '';
++  }
++}
+Index: web/src/app/Inicio/components/card/card.component.ts
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/web/src/app/Inicio/components/card/card.component.ts b/web/src/app/Inicio/components/card/card.component.ts
+new file mode 100644
+--- /dev/null	(date 1696049479938)
++++ b/web/src/app/Inicio/components/card/card.component.ts	(date 1696049479938)
+@@ -0,0 +1,35 @@
++import {AfterViewInit, Component, OnInit} from '@angular/core';
++import {Class} from "../../model/class.entity";
++import {MatTableDataSource} from "@angular/material/table";
++import {ClassesService} from "../../services/classes.service";
++
++@Component({
++  selector: 'app-card',
++  templateUrl: './card.component.html',
++  styleUrls: ['./card.component.css']
++})
++export class CardComponent implements OnInit, AfterViewInit {
++
++  classData: Class;
++  dataSource: MatTableDataSource<any>;
++  displayedColumns: string[] = ['id', 'studentCode', 'teacherCode', 'dateTime', 'subject'];
++
++  constructor(private appointmentsService: ClassesService) {
++    this.classData = {} as Class;
++    this.dataSource = new MatTableDataSource<any>();
++  }
++
++  private getAllAppointments() {
++    this.appointmentsService.getAll().subscribe((response: any) => {
++      this.dataSource.data = response;
++    });
++  }
++  ngAfterViewInit(): void {
++  }
++
++  ngOnInit(): void {
++    this.getAllAppointments();
++  }
++
++
++}
+Index: web/src/app/Inicio/components/card/card.component.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/web/src/app/Inicio/components/card/card.component.html b/web/src/app/Inicio/components/card/card.component.html
+new file mode 100644
+--- /dev/null	(date 1696052419468)
++++ b/web/src/app/Inicio/components/card/card.component.html	(date 1696052419468)
+@@ -0,0 +1,49 @@
++<!--
++<table [dataSource]="dataSource" class="mat-elevation-z8" mat-table matSort>
++  <mat-card>
++    <mat-card-header>Title</mat-card-header>
++    <mat-card-content *matCellDef="let element">{{ element.id }}{{ element.dateTime}}</mat-card-content>
++  </mat-card>
++  <tr *matHeaderRowDef="displayedColumns" mat-header-row></tr>
++  <tr *matRowDef="let row; columns: displayedColumns" [ngClass]="{'editable-row': classData.id === row.id}" mat-row></tr>
++</table>
++-->
++<mat-card class="g-card">
++  <mat-card-header>Tus clases:</mat-card-header>
++  <table mat-table [dataSource]="dataSource">
++    <mat-text-column name="id">
++      <th mat-header-cell *matHeaderCellDe> </th>
++      <td mat-cell *matCellDef="let user"> {{user.id}} </td>
++    </mat-text-column>
++    <mat-text-column name="studentCode">
++      <th mat-header-cell *matHeaderCellDef> </th>
++      <td mat-cell *matCellDef="let user"> {{user.studentCode}} </td>
++    </mat-text-column>
++    <mat-text-column name="teacherCode">
++      <th mat-header-cell *matHeaderCellDef> </th>
++      <td mat-cell *matCellDef="let user"> {{user.teacherCode}} </td>
++    </mat-text-column>
++    <mat-text-column name="dateTime">
++      <th mat-header-cell *matHeaderCellDef>Fecha</th>
++      <td mat-cell *matCellDef="let user"> {{user.dateTime}} </td>
++    </mat-text-column>
++    <mat-text-column name="subject">
++      <th mat-header-cell *matHeaderCellDef> </th>
++      <td mat-cell *matCellDef="let user"> {{user.subject}} </td>
++    </mat-text-column>
++    <tr *matHeaderRowDef="displayedColumns" mat-header-row></tr>
++    <tr *matRowDef="let row; columns: displayedColumns" [ngClass]="{'editable-row': classData.id === row.id}" mat-row></tr>
++  </table>
++</mat-card>
++
++
++
++<!--
++<mat-card>
++  <mat-card-header>Title</mat-card-header>
++  <mat-card-content>Content aaaaaaaaaaaa</mat-card-content>
++</mat-card>
++-->
++
++
++
+Index: web/src/app/Inicio/components/card/card.component.css
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/web/src/app/Inicio/components/card/card.component.css b/web/src/app/Inicio/components/card/card.component.css
+new file mode 100644
+--- /dev/null	(date 1696052936598)
++++ b/web/src/app/Inicio/components/card/card.component.css	(date 1696052936598)
+@@ -0,0 +1,4 @@
++.g-card{
++  background-color: #44A1A0;
++  width: 40%;
++}
+Index: web/src/app/Inicio/services/classes.service.ts
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/web/src/app/Inicio/services/classes.service.ts b/web/src/app/Inicio/services/classes.service.ts
+new file mode 100644
+--- /dev/null	(date 1696049145672)
++++ b/web/src/app/Inicio/services/classes.service.ts	(date 1696049145672)
+@@ -0,0 +1,14 @@
++import { Injectable } from '@angular/core';
++import {HttpService} from "../../shared/services/http.service";
++import {HttpClient} from "@angular/common/http";
++import {Class} from "../model/class.entity";
++@Injectable({
++  providedIn: 'root'
++})
++export class ClassesService extends HttpService<Class> {
++
++  constructor(http: HttpClient) {
++    super(http);
++    this.resourceEndpoint = '/classes';
++  }
++}
+Index: .idea/.gitignore
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/.gitignore b/.idea/.gitignore
+new file mode 100644
+--- /dev/null	(date 1696006709441)
++++ b/.idea/.gitignore	(date 1696006709441)
+@@ -0,0 +1,8 @@
++# Default ignored files
++/shelf/
++/workspace.xml
++# Editor-based HTTP Client requests
++/httpRequests/
++# Datasource local storage ignored files
++/dataSources/
++/dataSources.local.xml
+Index: .idea/TutorsMe_WEB.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/TutorsMe_WEB.iml b/.idea/TutorsMe_WEB.iml
+new file mode 100644
+--- /dev/null	(date 1696007520383)
++++ b/.idea/TutorsMe_WEB.iml	(date 1696007520383)
+@@ -0,0 +1,12 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<module type="JAVA_MODULE" version="4">
++  <component name="NewModuleRootManager" inherit-compiler-output="true">
++    <exclude-output />
++    <content url="file://$MODULE_DIR$">
++      <excludeFolder url="file://$MODULE_DIR$/web/dist" />
++      <excludeFolder url="file://$MODULE_DIR$/web/tmp" />
++    </content>
++    <orderEntry type="inheritedJdk" />
++    <orderEntry type="sourceFolder" forTests="false" />
++  </component>
++</module>
+\ No newline at end of file
+Index: web/src/app/app.module.ts
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import { NgModule } from '@angular/core';\r\nimport { BrowserModule } from '@angular/platform-browser';\r\n\r\nimport { AppRoutingModule } from './app-routing.module';\r\nimport { AppComponent } from './app.component';\r\nimport { BrowserAnimationsModule } from '@angular/platform-browser/animations';\r\nimport {HttpClientModule} from \"@angular/common/http\";\r\n\r\nimport {MatIconModule} from '@angular/material/icon';\r\nimport {MatDividerModule} from '@angular/material/divider';\r\nimport {MatButtonModule} from '@angular/material/button';\r\nimport {MatToolbarModule} from '@angular/material/toolbar';\r\nimport {MatTableModule} from '@angular/material/table';\r\nimport {MatFormFieldModule} from \"@angular/material/form-field\";\r\nimport {FormsModule, ReactiveFormsModule} from \"@angular/forms\";\r\nimport {MatInputModule} from \"@angular/material/input\";\r\nimport { FooterContentComponent } from './consume/components/footer-content/footer-content.component';\r\nimport { MainContentComponent } from './consume/components/main-content/main-content.component';\r\nimport { NavComponent } from './consume/components/nav/nav.component';\r\nimport { AboutComponent } from './public/pages/about/about.component';\r\nimport { HomeComponent } from './public/pages/home/home.component';\r\nimport { PageNotFoundComponent } from './public/pages/page-not-found/page-not-found.component';\r\nimport {AppointmentsService} from \"./schedule/services/appointments.service\";\r\nimport { AppointmentsComponent } from './schedule/pages/appointments/appointments.component';\r\nimport { AppointmentFormComponent } from './schedule/components/appointment-form/appointment-form.component';\r\n\r\n@NgModule({\r\n  declarations: [\r\n    AppComponent,\r\n    FooterContentComponent,\r\n    MainContentComponent,\r\n    NavComponent,\r\n    AboutComponent,\r\n    HomeComponent,\r\n    PageNotFoundComponent,\r\n    AppointmentsComponent,\r\n    AppointmentFormComponent\r\n  ],\r\n  imports: [\r\n    BrowserModule,\r\n    AppRoutingModule,\r\n    BrowserAnimationsModule,\r\n    HttpClientModule,\r\n    MatIconModule,\r\n    MatDividerModule,\r\n    MatButtonModule,\r\n    MatToolbarModule,\r\n    MatTableModule,\r\n    MatFormFieldModule,\r\n    FormsModule,\r\n    MatInputModule\r\n  ],\r\n  providers: [AppointmentsService],\r\n  bootstrap: [AppComponent]\r\n})\r\nexport class AppModule { }\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/web/src/app/app.module.ts b/web/src/app/app.module.ts
+--- a/web/src/app/app.module.ts	(revision 0f1a9e3bff1a3dec017798cabd391c8381a9de5f)
++++ b/web/src/app/app.module.ts	(date 1696048835836)
+@@ -14,6 +14,11 @@
+ import {MatFormFieldModule} from "@angular/material/form-field";
+ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+ import {MatInputModule} from "@angular/material/input";
++import {MatDatepickerModule} from '@angular/material/datepicker';
++import {MatCardModule} from '@angular/material/card';
++import {MatNativeDateModule} from '@angular/material/core';
++
++
+ import { FooterContentComponent } from './consume/components/footer-content/footer-content.component';
+ import { MainContentComponent } from './consume/components/main-content/main-content.component';
+ import { NavComponent } from './consume/components/nav/nav.component';
+@@ -23,6 +28,8 @@
+ import {AppointmentsService} from "./schedule/services/appointments.service";
+ import { AppointmentsComponent } from './schedule/pages/appointments/appointments.component';
+ import { AppointmentFormComponent } from './schedule/components/appointment-form/appointment-form.component';
++import { CalendarComponent } from './Inicio/components/calendar/calendar.component';
++import { CardComponent } from './inicio/components/card/card.component';
+ 
+ @NgModule({
+   declarations: [
+@@ -34,7 +41,8 @@
+     HomeComponent,
+     PageNotFoundComponent,
+     AppointmentsComponent,
+-    AppointmentFormComponent
++    AppointmentFormComponent,
++    CardComponent
+   ],
+   imports: [
+     BrowserModule,
+@@ -48,7 +56,11 @@
+     MatTableModule,
+     MatFormFieldModule,
+     FormsModule,
+-    MatInputModule
++    MatInputModule,
++    MatCardModule,
++    MatDatepickerModule,
++    MatNativeDateModule,
++    CalendarComponent
+   ],
+   providers: [AppointmentsService],
+   bootstrap: [AppComponent]
