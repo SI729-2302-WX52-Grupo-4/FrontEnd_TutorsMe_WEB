@@ -46,5 +46,21 @@
       "address": "Av. Arequipa 1258",
       "id": 5
     }
+  ],
+  "classes" : [
+    {
+      "id": 1,
+      "studentCode": "00000002",
+      "teacherCode": "T1010",
+      "dateTime": "2020-11-14T04:25:03-07:00",
+      "subject": "Matemática Computacional"
+    },
+    {
+      "id": 2,
+      "studentCode": "0000001",
+      "teacherCode": "T1023",
+      "dateTime": "2023-09-20T11:25:00-10:00",
+      "subject": "Introducción al derecho"
+    }
   ]
 }
