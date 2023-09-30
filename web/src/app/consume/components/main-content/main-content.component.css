@@ -1,3 +1,66 @@
 table {
   width: 80%;
 }
+.producto-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.producto {
+  width: calc(18% - 15px); /* Para mostrar 5 productos en una fila */
+  border: 1px solid rgba(122,200,199);
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
+  box-shadow: 0 0 5px rgba(122,200,199);
+  background-color: rgba(122,200,199,255); /* Cambia el color de fondo aquí */
+}
+
+.producto-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+img {
+  max-width: 100%;
+  width: 250px; /* Establece el ancho deseado */
+  height: 250px; /* Establece la misma altura que el ancho */
+  border-radius: 70%; /* Redondea la imagen en un círculo */
+}
+
+h3 {
+  margin-top: 10px;
+}
+
+.search-bar {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.search-container {
+  display: inline-flex;
+  border-radius: 50px; /* Ajusta el valor para hacerlo más ovalado */
+  overflow: hidden;
+  background-color: #fff; /* Cambia el color de fondo de la barra de búsqueda */
+  border: 1px solid #ccc;
+  width: 400px; /* Ancho deseado para la barra de búsqueda */
+}
+
+.search-container input[type="text"] {
+  padding: 10px;
+  width: 100%; /* Ocupa todo el ancho disponible dentro del contenedor */
+  border: none;
+  outline: none;
+}
+
+.search-container button {
+  padding: 10px 20px;
+  background-color: rgba(68,161,160); /* Color de fondo del botón de búsqueda */
+  color: #000000; /* Color del texto del botón de búsqueda */
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}

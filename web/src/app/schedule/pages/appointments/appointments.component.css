@@ -10,3 +10,15 @@ table {
 tr.editable-row {
   background-color: lightblue;
 }
+
+/* styles.css o styles.scss */
+.custom-table {
+  background-color: rgb(120, 205, 215);
+}
+
+/* styles.css o styles.scss */
+
+.custom-button {
+  background-color: #0D5C63; /* Color de fondo personalizado */
+  color: white; /* Color del texto en el botón */
+}
