@@ -1,28 +1,24 @@
-.g-card{
-  background-color: #44A1A0;
-  width: 40%;
+.demo-inline-calendar-card {
+  width: 30%;
+  border-radius: 10px;
+  border: #0D5C63 5px solid;
   display: flex;
   flex-direction: column;
   align-items: center; /* Centra horizontalmente al centro */
   justify-content: center; /* Centra verticalmente al centro */
+  margin: 0 auto; /* Centra el contenedor horizontalmente en el centro de su contenedor principal */
   height: 100%; /* Ajusta la altura del contenedor según el contenido */
 }
 
-.table-container {
-  width: 100%; /* Opcional: ajusta el ancho del contenedor según tu diseño */
-  overflow: auto; /* Opcional: agrega desplazamiento si la tabla es larga */
-}
-
-/* Estilos opcionales para la tabla */
-table.mat-table {
-  width: auto; /* Opcional: ajusta el ancho de la tabla según su contenido */
-  /* Otras propiedades de estilo según tus necesidades */
-}
-
-.page-container {
+.demo-inline-calendar-card  {
   display: flex;
   justify-content: center; /* Centra horizontalmente al centro de la página */
   align-items: center; /* Centra verticalmente al centro de la página */
   min-height: 50vh; /* Asegura que el contenedor ocupe toda la altura de la ventana */
 
+}
+
+mat-calendar {
+  width: 70%; /* Ajusta el ancho del calendario según tus necesidades */
+  height: 70%; /* Ajusta la altura del calendario según tus necesidades */
 }

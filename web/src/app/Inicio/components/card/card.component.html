@@ -7,33 +7,35 @@
   <tr *matHeaderRowDef="displayedColumns" mat-header-row></tr>
   <tr *matRowDef="let row; columns: displayedColumns" [ngClass]="{'editable-row': classData.id === row.id}" mat-row></tr>
 </table>
--->
+--><div class="page-container">
 <mat-card class="g-card">
   <mat-card-header>Tus clases:</mat-card-header>
-  <table mat-table [dataSource]="dataSource">
-    <mat-text-column name="id">
-      <th mat-header-cell *matHeaderCellDe> </th>
-      <td mat-cell *matCellDef="let user"> {{user.id}} </td>
-    </mat-text-column>
-    <mat-text-column name="studentCode">
-      <th mat-header-cell *matHeaderCellDef> </th>
-      <td mat-cell *matCellDef="let user"> {{user.studentCode}} </td>
-    </mat-text-column>
-    <mat-text-column name="teacherCode">
-      <th mat-header-cell *matHeaderCellDef> </th>
-      <td mat-cell *matCellDef="let user"> {{user.teacherCode}} </td>
-    </mat-text-column>
-    <mat-text-column name="dateTime">
-      <th mat-header-cell *matHeaderCellDef>Fecha</th>
-      <td mat-cell *matCellDef="let user"> {{user.dateTime}} </td>
-    </mat-text-column>
-    <mat-text-column name="subject">
-      <th mat-header-cell *matHeaderCellDef> </th>
-      <td mat-cell *matCellDef="let user"> {{user.subject}} </td>
-    </mat-text-column>
-    <tr *matHeaderRowDef="displayedColumns" mat-header-row></tr>
-    <tr *matRowDef="let row; columns: displayedColumns" [ngClass]="{'editable-row': classData.id === row.id}" mat-row></tr>
-  </table>
+  <div class="table-container">
+   <table mat-table [dataSource]="dataSource">
+     <mat-text-column name="id">
+       <th mat-header-cell *matHeaderCellDe> </th>
+       <td mat-cell *matCellDef="let user"> {{user.id}} </td>
+     </mat-text-column>
+     <mat-text-column name="studentCode">
+       <th mat-header-cell *matHeaderCellDef> </th>
+       <td mat-cell *matCellDef="let user"> {{user.studentCode}} </td>
+     </mat-text-column>
+     <mat-text-column name="teacherCode">
+       <th mat-header-cell *matHeaderCellDef> </th>
+       <td mat-cell *matCellDef="let user"> {{user.teacherCode}} </td>
+     </mat-text-column>
+     <mat-text-column name="dateTime">
+       <th mat-header-cell *matHeaderCellDef>Fecha</th>
+       <td mat-cell *matCellDef="let user"> {{user.dateTime}} </td>
+     </mat-text-column>
+     <mat-text-column name="subject">
+       <th mat-header-cell *matHeaderCellDef> </th>
+       <td mat-cell *matCellDef="let user"> {{user.subject}} </td>
+     </mat-text-column>
+     <tr *matHeaderRowDef="displayedColumns" mat-header-row></tr>
+     <tr *matRowDef="let row; columns: displayedColumns" [ngClass]="{'editable-row': classData.id === row.id}" mat-row></tr>
+   </table>
+  </div>
 </mat-card>
 
 
