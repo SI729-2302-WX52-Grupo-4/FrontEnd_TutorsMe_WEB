@@ -1,0 +1,19 @@
+.example-spacer {
+  
+  flex: 0.50 auto;
+ 
+}
+
+.separate-button {
+  right: -350px; 
+
+}
+
+@font-face {
+  font-family: 'Concert One';
+  src: url('https://fonts.google.com/specimen/Concert+One') format('truetype');
+}
+
+.selector {
+  font-family: 'Concert One', sans-serif;
+}

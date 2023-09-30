@@ -1,0 +1,30 @@
+<!-- Edit/Add Form -->
+<h2>{{ editMode ? 'Edit Appointment' : 'Add Appointment' }}</h2>
+
+<div class="form-section">
+  <form (submit)="onSubmit()" #appointmentForm='ngForm' class="form-row">
+    <mat-form-field>
+      <input matInput placeholder="Clase" name="curso" required [(ngModel)]="appointment.curso">
+    </mat-form-field>
+    <mat-form-field id="age-form-field">
+      <input matInput type="Profesor" placeholder="Profesor" name="nombredocente" required [(ngModel)]="appointment.nombredocente">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Dias de clase" name="diasdeclase" required [(ngModel)]="appointment.diasdeclase">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Cantidad de tareas" name="tareasasignadas" required [(ngModel)]="appointment.tareasasignadas">
+    </mat-form-field>
+
+    <ng-container *ngIf="editMode; else elseTemplate">
+      <button mat-raised-button color="primary">Actualizar clase</button>
+      <button mat-raised-button color="warn" (click)="onCancel()">Cancelar Clase</button>
+    </ng-container>
+    <ng-template #elseTemplate>
+      
+      <button mat-raised-button class="custom-button" style="margin-left: 15px;">Agregar Clase</button>
+    </ng-template>
+  </form>
+</div>
+
+
