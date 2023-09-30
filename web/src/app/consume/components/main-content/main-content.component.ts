@@ -13,6 +13,8 @@ interface Producto {
   styleUrls: ['./main-content.component.css']
 })
 export class MainContentComponent {
+  dataSource: any[] = [];
+  displayedColumns: string[] = [];
   productos: Producto[] = [
     {
       nombre: 'Manuel Vargas',
