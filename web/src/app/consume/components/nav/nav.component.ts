@@ -8,9 +8,9 @@ import { Component } from '@angular/core';
 export class NavComponent {
   title = 'TutorsMe';
   options = [
-    { path: '/home', title: 'Inicio', fontSize: 20 }, 
-    { path: '/consume/newsapi', title: 'Profesores', fontSize: 20 },
-    { path: '/home', title: 'Buscador', fontSize: 20 },
+    { path: '/home', title: 'Inicio', fontSize: 20 },
+    { path: 'Profesores', title: 'Profesores', fontSize: 20 },
+    { path: '/Buscador', title: 'Buscador', fontSize: 20 },
     { path: '/schedule/appointment', title: 'Sesiones', fontSize: 20 },
     { path: '/about', title: 'Perfil', fontSize: 20 }
   ];

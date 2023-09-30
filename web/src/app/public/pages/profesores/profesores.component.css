@@ -1,0 +1,53 @@
+mat-grid-tile {
+
+
+  background: #44A1A0;
+}
+.grid-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+.custom-grid-tile {
+  width: 100px;
+}
+.mat-grid-tile .grid-item p {
+  margin-bottom: 5px; /* Ajusta el valor según la separación deseada */
+}
+
+.titulo {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  font-family: 'Concert One', sans-serif; /* Utiliza 'Concert One' como nombre de la fuente */
+}
+
+.mat-card-subtitle {
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  font-family: 'Concert One', sans-serif; /* Utiliza 'Concert One' como nombre de la fuente */
+}
+
+.container {
+  width: 100%;
+  overflow: auto;
+  white-space: nowrap;
+  display: flex;
+}
+.spacer {
+  height: 20px; /* Ajusta el espacio horizontal entre los grid-lists */
+}
+.small-image {
+  width: 200px !important; /* Establece el ancho deseado con !important */
+  height: auto !important; /* Mantiene la relación de aspecto original con !important */
+}
+
