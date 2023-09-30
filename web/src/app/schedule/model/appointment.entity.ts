@@ -1,14 +1,14 @@
 export class Appointment {
   id: number;
-  studentCode: string;
-  teacherCode: number;
-  dateTime: string;
-  subject: string;
+  curso: string;
+  nombredocente: string;
+  diasdeclase: string;
+  tareasasignadas: number;
   constructor() {
     this.id = 0;
-    this.studentCode = '';
-    this.teacherCode = 0;
-    this.dateTime = '';
-    this.subject = '';
+    this.curso = '';
+    this.nombredocente = '';
+    this.diasdeclase = '';
+    this.tareasasignadas = 0;
   }
 }

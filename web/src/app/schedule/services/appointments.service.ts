@@ -11,5 +11,8 @@ export class AppointmentsService extends HttpService<Appointment>{
   constructor(http: HttpClient) {
     super(http);
     this.resourceEndpoint = '/appointments';
+    
   }
+
+  
 }
