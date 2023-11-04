@@ -62,5 +62,91 @@
       "dateTime": "2023-09-20T11:25:00-10:00",
       "subject": "Introducción al derecho"
     }
+  ],
+
+  "profesores" : [
+    {
+      "id": 1,
+      "name": "Alessandro Vega",
+      "rating": "4",
+      "course": "Matemámtica",
+      "description": "¡Hola a todos! Soy el profesor Vega, apasionado de las matemáticas y comprometido con su enseñanza y comprensión.",
+      "image": "https://medicoplus.com/_next/image?url=https%3A%2F%2Fplustatic.com%2F5550%2Fconversions%2Ftipos-profesores-large.jpg&w=1024&q=75"
+    },
+    {
+      "id": 2,
+      "name": "Manuel  Vargas",
+      "rating": "4.5",
+      "course": "Aritmetica",
+      "description": "¡Hola! Soy el profesor Vargas, comprometido a hacer que la aritmética sea emocionante y accesible para todos mis estudiantes.",
+      "image": "https://qespacio.com/blog/wp-content/uploads/2019/10/profesor-particular-ingles.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Giakomo Causso",
+      "rating": "4.8",
+      "course": "Algebra",
+      "description": "¡Saludos! Soy el profesor Causso, un apasionado de las matemáticas comprometido con enseñar y facilitar la comprensión del álgebra. ",
+      "image": "https://www.elegircarrera.net/blog/wp-content/uploads/2017/04/me-gusta-mi-profesor-1024x682.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Jose Lopez",
+      "rating": "4.65",
+      "course": "Python",
+      "description": "¡Que tal! Soy el profesor Lopez, entusiasmado con las matemáticas y enamorado de las posibilidades que Python ofrece.",
+      "image": "https://static.vecteezy.com/system/resources/previews/000/876/151/non_2x/professor-with-students-in-computer-lab-photo.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Mario Aranda",
+      "rating": "4.72",
+      "course": "Comunicación",
+      "description": "Soy el profesor Aranda, mi pasión por la comunicación me impulsa a mostrarles cómo las habilidades comunicativas pueden abrir puertas en todos los aspectos de la vida.",
+      "image": "https://thumbs.dreamstime.com/b/profesor-cuenta-una-interesante-conferencia-sobre-comunicaci%C3%B3n-gratuita-con-los-estudiantes-en-aula-libre-el-247081664.jpg\n"
+    }
+  ],
+
+  "profesoresFav" : [
+    {
+      "id": 1,
+      "name": "Ruth Jarmillo",
+      "rating": "4.7",
+      "course": "Fisica",
+      "description": "¡Saludos! Soy la profesora Jarmillo, y mi fascinación por la física me impulsa a mostrarles cómo los fenómenos naturales siguen reglas y principios fascinantes. ",
+      "image": "https://www.magisnet.com/wp-content/uploads/2020/11/Nivel-de-Ingles.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Nicolas Haro",
+      "rating": "4.4",
+      "course": "Programación",
+      "description": "¡Hola a todos! Soy el profesor Haro, y mi pasión por la programación me impulsa a mostrarles cómo el código puede dar vida a ideas innovadoras y soluciones prácticas.",
+      "image": "https://apliense.xtec.cat/prestatgeria/centres/a8062717_2821/57b333cfc99f.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Max Arroyo",
+      "rating": "4.9",
+      "course": "Edicion de videos",
+      "description": "¡Hola a todos! Soy el profesor Arroyo y mi pasión por la edición de videos me impulsa a mostrarles cómo transformar ideas en historias visuales impactantes.",
+      "image": "https://www.udep.edu.pe/hoy/wp-content/uploads/sites/49/2018/07/Tomas-Atarama.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Gustavo Siancas",
+      "rating": "4.59",
+      "course": "Contabilidad",
+      "description": "¡Saludos! Soy el profesor Siancas, y mi dedicación a la contabilidad me impulsa a mostrarles cómo los números cuentan historias y revelan la salud financiera de cualquier empresa.",
+      "image": "https://www.udep.edu.pe/wp-content/uploads/sites/49/media/2020/11/Julio-Hernandez-Contabilidad-520x293-2-1-520x293.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Joshua Rivera",
+      "rating": "4.79",
+      "course": "Electronica",
+      "description": "¡Hola a todos! Soy el profesor Rivera, y mi fascinación por la electrónica me impulsa a mostrarles cómo los circuitos y componentes pueden dar vida a la tecnología que usamos a diario.",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXg2rm_lUHgFDHAzSq_npN8FuupFLYBWo7RP4bdb_jXobncN_MypZFzO8UwH9u9LdCE3Q&usqp=CAU"
+    }
   ]
 }

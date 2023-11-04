@@ -1,6 +1,50 @@
+.example-card {
+  max-width: 350px;
+}
+.cards-container {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  overflow-y: auto;;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  grid-template-rows: repeat(auto-fill,minmax(200px,1fr));
+  gap: 10px;
+  justify-content: left;
+  align-items: center;
+  width: 80%;
+  max-width: 10000px;
+  margin: 0 auto;
+  background-color: #44A1A0;
+}
+
+.mat-icon{
+  color: yellow;
+}
+
+.card {
+  margin-right: 10px;
+  margin-left: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  max-width: 100%;
+}
+
+.mat-card-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.mat-card-actions button {
+  margin: 0 10px;
+}
+
+
+
+
+
 mat-grid-tile {
-
-
   background: #44A1A0;
 }
 .grid-item {
