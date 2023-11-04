@@ -14,13 +14,13 @@ export class CardComponent implements OnInit, AfterViewInit {
   dataSource: MatTableDataSource<any>;
   displayedColumns: string[] = ['id', 'studentCode', 'teacherCode', 'dateTime', 'subject'];
 
-  constructor(private appointmentsService: ClassesService) {
+  constructor(private classesService: ClassesService) {
     this.classData = {} as Class;
     this.dataSource = new MatTableDataSource<any>();
   }
 
-  private getAllAppointments() {
-    this.appointmentsService.getAll().subscribe((response: any) => {
+  private getAllClasses() {
+    this.classesService.getAll().subscribe((response: any) => {
       this.dataSource.data = response;
     });
   }
@@ -28,7 +28,7 @@ export class CardComponent implements OnInit, AfterViewInit {
   }
 
   ngOnInit(): void {
-    this.getAllAppointments();
+    this.getAllClasses();
   }
 
 

@@ -1,0 +1,27 @@
+html{
+  background-color: white;
+}
+.perfil-content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 80%;
+}
+img{
+  border-radius: 50px;
+  width: 100px;
+  margin-bottom: 20px;
+}
+.card{
+  padding: 2%;
+  background-color: #7AC8C7;
+  border-radius: 15px;
+  color: white;
+
+}
+
+.card h2{
+  color: #0D5C63;
+}

@@ -1,51 +1,36 @@
-<!--
-<table [dataSource]="dataSource" class="mat-elevation-z8" mat-table matSort>
-  <mat-card>
-    <mat-card-header>Title</mat-card-header>
-    <mat-card-content *matCellDef="let element">{{ element.id }}{{ element.dateTime}}</mat-card-content>
+<div class="page-container">
+  <mat-card class="g-card">
+    <mat-card-header>Tus clases:</mat-card-header>
+    <div class="table-container">
+     <table mat-table [dataSource]="dataSource">
+       <ng-container matColumnDef="id">
+         <th mat-header-cell *matHeaderCellDef>Id</th>
+         <td mat-cell *matCellDef="let user"> {{user.id}} </td>
+       </ng-container>
+       <ng-container matColumnDef="studentCode">
+         <th mat-header-cell *matHeaderCellDef>Student Code</th>
+         <td mat-cell *matCellDef="let user"> {{user.studentCode}} </td>
+       </ng-container>
+       <ng-container matColumnDef="teacherCode">
+         <th mat-header-cell *matHeaderCellDef>Teacher Code</th>
+         <td mat-cell *matCellDef="let user"> {{user.teacherCode}} </td>
+       </ng-container>
+       <ng-container matColumnDef="dateTime">
+         <th mat-header-cell *matHeaderCellDef>Date time</th>
+         <td mat-cell *matCellDef="let user"> {{user.dateTime}} </td>
+       </ng-container>
+       <ng-container matColumnDef="subject">
+         <th mat-header-cell *matHeaderCellDef>Subject</th>
+         <td mat-cell *matCellDef="let user"> {{user.subject}} </td>
+       </ng-container>
+       <tr *matHeaderRowDef="displayedColumns" mat-header-row></tr>
+       <tr *matRowDef="let row; columns: displayedColumns;" [ngClass]="{'editable-row': classData.id === row.id}" mat-row></tr>
+     </table>
+    </div>
   </mat-card>
-  <tr *matHeaderRowDef="displayedColumns" mat-header-row></tr>
-  <tr *matRowDef="let row; columns: displayedColumns" [ngClass]="{'editable-row': classData.id === row.id}" mat-row></tr>
-</table>
---><div class="page-container">
-<mat-card class="g-card">
-  <mat-card-header>Tus clases:</mat-card-header>
-  <div class="table-container">
-   <table mat-table [dataSource]="dataSource">
-     <mat-text-column name="id">
-       <th mat-header-cell *matHeaderCellDe> </th>
-       <td mat-cell *matCellDef="let user"> {{user.id}} </td>
-     </mat-text-column>
-     <mat-text-column name="studentCode">
-       <th mat-header-cell *matHeaderCellDef> </th>
-       <td mat-cell *matCellDef="let user"> {{user.studentCode}} </td>
-     </mat-text-column>
-     <mat-text-column name="teacherCode">
-       <th mat-header-cell *matHeaderCellDef> </th>
-       <td mat-cell *matCellDef="let user"> {{user.teacherCode}} </td>
-     </mat-text-column>
-     <mat-text-column name="dateTime">
-       <th mat-header-cell *matHeaderCellDef>Fecha</th>
-       <td mat-cell *matCellDef="let user"> {{user.dateTime}} </td>
-     </mat-text-column>
-     <mat-text-column name="subject">
-       <th mat-header-cell *matHeaderCellDef> </th>
-       <td mat-cell *matCellDef="let user"> {{user.subject}} </td>
-     </mat-text-column>
-     <tr *matHeaderRowDef="displayedColumns" mat-header-row></tr>
-     <tr *matRowDef="let row; columns: displayedColumns" [ngClass]="{'editable-row': classData.id === row.id}" mat-row></tr>
-   </table>
-  </div>
-</mat-card>
+</div>
 
 
-
-<!--
-<mat-card>
-  <mat-card-header>Title</mat-card-header>
-  <mat-card-content>Content aaaaaaaaaaaa</mat-card-content>
-</mat-card>
--->
 
 
 
