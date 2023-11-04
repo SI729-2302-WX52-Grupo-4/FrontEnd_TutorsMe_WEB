@@ -11,7 +11,7 @@ import {ProfesoresComponent} from "./public/pages/profesores/profesores.componen
 const routes: Routes = [
   {path: 'home', component: HomeComponent},
   {path: 'Profesores', component: MainContentComponent},
-  {path: 'schedule/appointment', component: AppointmentsComponent}, //SESIONES DE CLASE
+  {path: 'schedule/appointment', component: AppointmentsComponent},
   {path: 'Buscador', component: ProfesoresComponent},
   {path: 'about', component: AboutComponent},
   {path: '', redirectTo: 'home', pathMatch: 'full'},
