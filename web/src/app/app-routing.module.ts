@@ -6,6 +6,7 @@ import {PageNotFoundComponent} from "./public/pages/page-not-found/page-not-foun
 import {MainContentComponent} from "./consume/components/main-content/main-content.component";
 import {AppointmentsComponent} from "./schedule/pages/appointments/appointments.component";
 import {ProfesoresComponent} from "./public/pages/profesores/profesores.component";
+import {PerfilContentComponent} from "./perfil/pages/perfil-content/perfil-content.component";
 //new
 
 const routes: Routes = [
@@ -13,7 +14,7 @@ const routes: Routes = [
   {path: 'Profesores', component: MainContentComponent},
   {path: 'schedule/appointment', component: AppointmentsComponent}, //SESIONES DE CLASE
   {path: 'Buscador', component: ProfesoresComponent},
-  {path: 'about', component: AboutComponent},
+  {path: 'perfil', component: PerfilContentComponent},
   {path: '', redirectTo: 'home', pathMatch: 'full'},
   {path: '**', component: PageNotFoundComponent}
 

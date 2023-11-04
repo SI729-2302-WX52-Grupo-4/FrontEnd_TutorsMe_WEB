@@ -12,7 +12,7 @@ export class NavComponent {
     { path: 'Profesores', title: 'Profesores', fontSize: 20 },
     { path: '/Buscador', title: 'Buscador', fontSize: 20 },
     { path: '/schedule/appointment', title: 'Sesiones', fontSize: 20 },
-    { path: '/about', title: 'Perfil', fontSize: 20 }
+    { path: '/perfil', title: 'Perfil', fontSize: 20 }
   ];
 }
 
