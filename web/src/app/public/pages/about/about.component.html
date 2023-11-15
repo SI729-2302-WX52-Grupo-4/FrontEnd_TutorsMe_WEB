@@ -1,1 +1,17 @@
-<p>About our company</p>
+<!-- about.component.html -->
+<div class="login-container">
+    <h2>Login</h2>
+    <form (ngSubmit)="login()" #loginForm="ngForm">
+        <div class="form-group">
+            <label for="username">Email:</label>
+            <input type="text" id="username" name="username" [(ngModel)]="username" required>
+        </div>
+        <div class="form-group">
+            <label for="password">Contraseña:</label>
+            <input type="password" id="password" name="password" [(ngModel)]="password" required>
+        </div>
+        <button type="submit" [disabled]="!loginForm.valid">Iniciar Sesión</button>
+        <span class="register-link"><a [routerLink]="['/register']">¿No tienes cuenta "Profesores"?</a></span>
+        <span class="register-link-Alumnos"><a [routerLink]="['/...']">¿No tienes cuenta "Alumnos"?</a></span>
+    </form>
+</div>

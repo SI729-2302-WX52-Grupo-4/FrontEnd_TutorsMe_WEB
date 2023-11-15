@@ -1,4 +1,6 @@
-.login-container {
+/* register.component.css */
+
+.register-container {
     max-width: 300px;
     margin: 0 auto;
     padding: 20px;
@@ -6,22 +8,21 @@
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     background-color: #fff;
-    margin-top: 100px;
-    margin-bottom: 100px;
+    margin-top: 30px;
+    margin-bottom: 70px;
   }
-  
   
   .form-group {
     margin-bottom: 10px;
-
   }
   
   label {
     display: block;
+    margin-bottom: 5px;
   }
   
   input {
-    width: 100%;
+    width: calc(100% - 12px);
     padding: 5px;
     border: 1px solid #ccc;
     border-radius: 3px;
@@ -34,30 +35,10 @@
     border-radius: 3px;
     padding: 10px 20px;
     cursor: pointer;
-    margin-left: 90px;
-    margin-top: 20px;
-
   }
   
   button:disabled {
     background-color: #ccc;
     cursor: not-allowed;
   }
-
-  /*Margen para el "¿No tienes cuenta?"*/
-  .register-link {
-    margin-left: 45px; 
-    margin-top: 30px;
-    display: block;
-    
-  }
-
-  .register-link-Alumnos {
-
-    
-    margin-top: 10px;
-    margin-left: 50px; 
-    display: block;
-
-    
-  }
+  

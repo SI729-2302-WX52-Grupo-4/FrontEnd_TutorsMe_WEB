@@ -30,6 +30,10 @@ import { AppointmentsComponent } from './schedule/pages/appointments/appointment
 import { AppointmentFormComponent } from './schedule/components/appointment-form/appointment-form.component';
 import { CalendarComponent } from './Inicio/components/calendar/calendar.component';
 import { CardComponent } from './inicio/components/card/card.component';
+import { RegisterComponent } from './public/pages/register/register.component';
+
+
+
 
 @NgModule({
   declarations: [
@@ -42,7 +46,8 @@ import { CardComponent } from './inicio/components/card/card.component';
     PageNotFoundComponent,
     AppointmentsComponent,
     AppointmentFormComponent,
-    CardComponent
+    CardComponent,
+    RegisterComponent,
   ],
   imports: [
     BrowserModule,
