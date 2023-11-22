@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class RegisterComponent {
   firstName: string = '';
   lastName: string = '';
-  birthDate: Date = new Date(); // Asigna un valor por defecto (puede ser la fecha actual)
+  birthDate: Date = new Date();
   email: string = '';
   password: string = '';
 
