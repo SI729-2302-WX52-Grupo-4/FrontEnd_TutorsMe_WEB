@@ -1,6 +1,6 @@
 <div class="spacer"></div>
 <p class="titulo">Profesores</p>
-<p class="mat-card-subtitle">Tus favoritos</p>
+<p class="subtitle">Tus docentes</p>
 
 <div class="cards-container">
   <div *ngFor="let profesor of profesores" class="card">
@@ -19,7 +19,7 @@
       </mat-card-content>
 
       <mat-card-actions>
-        <button mat-button>Like <mat-icon style="color: black"> favorite </mat-icon> </button>
+        <button mat-button>Unlike <mat-icon style="color: black"> favorite </mat-icon> </button>
         <button mat-button>Class <mat-icon style="color: black"> class </mat-icon> </button>
       </mat-card-actions>
 
@@ -30,7 +30,7 @@
 
 <div class="spacer"></div>
 
-<p class="mat-card-subtitle">Tus docentes</p>
+<p class="subtitle">Tus favoritos</p>
 
 <div class="cards-container">
   <div *ngFor="let profesorFav of profesoresFav" class="card">

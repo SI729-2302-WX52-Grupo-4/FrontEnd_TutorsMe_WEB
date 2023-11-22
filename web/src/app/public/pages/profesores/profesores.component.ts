@@ -31,11 +31,6 @@ export class ProfesoresComponent implements OnInit{
       this.profesoresFav=response
     })
   }
-
-
-
-
-
 }
 
 
