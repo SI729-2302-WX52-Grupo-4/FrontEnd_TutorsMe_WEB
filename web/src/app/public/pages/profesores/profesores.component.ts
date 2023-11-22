@@ -23,18 +23,26 @@ export class ProfesoresComponent implements OnInit{
   }
 
   ngOnInit(): void {
-    this.profesorService.getAll().subscribe((response:any)=>{
-      this.profesores=response
-    })
-    this.profesorFavService.getAll().subscribe((response:any)=>{
-      console.log()
-      this.profesoresFav=response
-    })
+    this.profesorService.getAll().subscribe(
+      (response: any) => {
+        console.log('Profesores:', response);
+        this.profesores = response;
+      },
+      (error: any) => {
+        console.error('Error fetching Profesores:', error);
+      }
+    );
+
+    this.profesorFavService.getAll().subscribe(
+      (response: any) => {
+        console.log('Profesores Favoritos:', response);
+        this.profesoresFav = response;
+      },
+      (error: any) => {
+        console.error('Error fetching Profesores Favoritos:', error);
+      }
+    );
   }
-
-
-
-
 
 }
 
