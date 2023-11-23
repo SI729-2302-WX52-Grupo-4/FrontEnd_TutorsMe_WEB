@@ -8,18 +8,24 @@ import {ProfesoresEntity} from "./model/profesores.entity";
 import {NgForOf} from "@angular/common";
 import {ProfesoresFavEntity} from "./model/profesoresFav.entity";
 import {ProfesoresFavService} from "./services/profesores-fav.service";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {SearchService} from "../../../consume/services/search.service";
 
 @Component({
   selector: 'app-home',
   templateUrl: './profesores.component.html',
   styleUrls: ['./profesores.component.css'],
   standalone: true,
-  imports: [MatGridListModule, MatIconModule, MatCardModule, MatButtonModule, NgForOf],
+  imports: [MatGridListModule, MatIconModule, MatCardModule, MatButtonModule, NgForOf, ReactiveFormsModule, FormsModule],
 })
 export class ProfesoresComponent implements OnInit{
   profesores:Array<ProfesoresEntity>=[]
   profesoresFav:Array<ProfesoresFavEntity>=[]
-  constructor(private profesorService:ProfesoresService, private profesorFavService:ProfesoresFavService) {
+
+  searchQuery: string = '';
+  searchResults: string[] = [];
+
+  constructor(private searchService: SearchService, private profesorService:ProfesoresService, private profesorFavService:ProfesoresFavService) {
   }
 
   ngOnInit(): void {
@@ -42,6 +48,12 @@ export class ProfesoresComponent implements OnInit{
         console.error('Error fetching Profesores Favoritos:', error);
       }
     );
+  }
+
+  search(): void {
+    this.searchService.search(this.searchQuery).subscribe(results => {
+      this.searchResults = results;
+    });
   }
 
 }
