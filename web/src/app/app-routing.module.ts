@@ -12,13 +12,13 @@ import {SesionesComponent} from "./public/pages/sesiones/sesiones.component";
 
 const routes: Routes = [
   {path: 'home', component: HomeComponent},
-  {path: 'Profesores', component: MainContentComponent},
+  //{path: 'Buscador', component: MainContentComponent},
   {path: 'schedule/appointment', component: AppointmentsComponent},
   {path: 'sesiones', component: SesionesComponent},
-  {path: 'Buscador', component: ProfesoresComponent},
+  {path: 'Profesores', component: ProfesoresComponent},
   {path: 'register', component: RegisterComponent},
   {path: 'about', component: AboutComponent},
-  {path: '', redirectTo: 'home', pathMatch: 'full'},
+  {path: '', redirectTo: 'about', pathMatch: 'full'},
   {path: '**', component: PageNotFoundComponent}
 
 

@@ -95,3 +95,57 @@ mat-grid-tile {
   height: auto !important; /* Mantiene la relación de aspecto original con !important */
 }
 
+
+/*Buscador
+
+
+ */
+
+/* main.component.css */
+
+/* Estilos para el contenedor principal del buscador */
+.search-bar {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 10vh; /* Ajusta la altura según sea necesario */
+  box-sizing: border-box; /* Incluye el relleno y el borde en el tamaño total */
+  border-radius: 100px;
+}
+
+/* Estilos para el contenedor interno del buscador */
+.search-container {
+  text-align: center;
+  max-width: 100px; /* Ajusta el ancho máximo según sea necesario */
+  width: 10%; /* Asegura que el contenedor no sea más ancho que el viewport */
+  padding: 0 15px; /* Agrega relleno a los lados según sea necesario */
+  box-sizing: border-box; /* Incluye el relleno y el borde en el tamaño total */
+}
+
+/* Estilos para el campo de entrada de texto */
+.search-bar input {
+  padding: 10px;
+  width: 500px; /* Ajusta el ancho según sea necesario */
+  font-size: 12px; /* Ajusta el tamaño de la fuente según sea necesario */
+  border-radius: 10px;
+  border: 1px solid #ccc; /* Ajusta el grosor y color del contorno */
+  outline: none; /* Elimina el contorno predeterminado de foco */
+}
+
+/* Estilo para el campo de entrada de texto cuando está enfocado */
+.search-bar input:focus {
+  border: 1px solid #44A1A0; /* Cambia el contorno al hacer clic */
+}
+/* Estilos para el botón de búsqueda */
+.search-bar button {
+  padding: 10px 20px;
+  background-color: #44A1A0; /* Color principal de Google */
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 12px; /* Ajusta el tamaño de la fuente según sea necesario */
+}
+
+

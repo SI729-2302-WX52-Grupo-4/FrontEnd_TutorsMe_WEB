@@ -1,17 +1,11 @@
 <div class="search-bar">
-  <form action="buscar.php" method="GET">
-    <div class="search-container">
-      <input type="text" name="q" placeholder="Hoy aprenderé sobre...">
-      <button type="submit">Buscar</button>
-    </div>
-  </form>
+  <input [(ngModel)]="searchQuery" placeholder="Hoy aprenderé sobre...">
+  <button (click)="search()">Buscar</button>
 </div>
-<div class="producto-container">
-  <div *ngFor="let producto of productos" class="producto">
-    <div class="producto-inner">
-      <img [src]="producto.imagenUrl" alt="{{ producto.nombre }}">
-      <h3>{{ producto.nombre }}</h3>
-      <p>{{ producto.descripcion }}</p>
-    </div>
-  </div>
+
+<div *ngIf="searchResults.length > 0">
+  <h3>Resultados de la búsqueda:</h3>
+  <ul>
+    <li *ngFor="let result of searchResults">{{ result }}</li>
+  </ul>
 </div>
