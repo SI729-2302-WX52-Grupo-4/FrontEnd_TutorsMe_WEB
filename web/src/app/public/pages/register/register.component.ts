@@ -12,6 +12,7 @@ export class RegisterComponent {
   birthDate: string = '';
   emailAddress: string = '';
   password: string = '';
+  users: any[] = []; // Agrega esta línea para almacenar los usuarios
 
   constructor(private userService:UserService) {
   }
@@ -25,22 +26,33 @@ export class RegisterComponent {
       password: this.password
     }
 
-    console.log('Datos del profesor:', {
-      firstName: this.firstName,
-      lastname: this.lastname,
-      birthDate: this.birthDate,
-      emailAddress: this.emailAddress,
-      password: this.password
-    });
+    console.log('Datos del profesor:',nuevoUser);
 
     this.userService.createUser(nuevoUser).subscribe(
       (response: any) => {
         console.log('user:', response);
         this.userService = response;
+        this.users.push(response);
       },
       (error: any) => {
         console.error('Error fetching userservice:', error);
       }
     );
+  }
+
+
+  getAllUser()
+  {
+    this.userService.getAllUser().subscribe(
+      (response: any) => {
+        console.log('user:', response);
+        this.userService = response;
+        this.users = response;
+      },
+      (error: any) => {
+        console.error('Error fetching userservice:', error);
+      }
+    );
+
   }
 }

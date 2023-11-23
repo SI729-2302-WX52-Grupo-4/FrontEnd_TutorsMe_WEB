@@ -3,7 +3,7 @@ export class UserEntity {
   lastname: string;
   birthDate: string;
   emailAddress: string;
-  password: string;
+  password: string  ;
 
   constructor() {
     this.firstName = '';

@@ -29,4 +29,25 @@
         <button type="submit" [disabled]="!registerForm.form.valid">Registrar Profesor</button>
     </form>
 </div>
+<!-- Botón para obtener todos los usuarios -->
 
+<button (click)="getAllUser()">Obtener Todos los Usuarios</button>
+<!-- Tabla para mostrar los usuarios -->
+<table *ngIf="users.length > 0">
+  <thead>
+  <tr>
+    <th>Nombre</th>
+    <th>Apellido</th>
+    <th>Fecha de Nacimiento</th>
+    <th>Correo Electrónico</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let user of users">
+    <td>{{ user.firstName }}</td>
+    <td>{{ user.lastname }}</td>
+    <td>{{ user.birthDate }}</td>
+    <td>{{ user.emailAddress }}</td>
+  </tr>
+  </tbody>
+</table>

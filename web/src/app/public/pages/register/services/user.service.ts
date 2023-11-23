@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
-import {HttpClient} from "@angular/common/http";
+import {HttpClient, HttpErrorResponse} from "@angular/common/http";
 import {HttpService} from "../../../../shared/services/http.service";
 import {UserEntity} from "../model/user.entity";
-import {catchError, retry} from "rxjs";
+import {catchError, Observable, retry} from "rxjs";
 
 @Injectable({
   providedIn: 'root'
@@ -18,5 +18,21 @@ export class UserService extends HttpService<UserEntity>{
     return this.http.post<UserService>(this.resourcePath(),
       JSON.stringify(item), this.httpOptions)
       .pipe(retry(2), catchError(this.handleError));
+  }
+
+
+  getAllUser(): Observable<UserService> {
+    this.resourceEndpoint = '/users';
+    return this.http.get<UserService>(this.resourcePath(), this.httpOptions)
+      .pipe(
+        retry(2),
+        catchError((error: HttpErrorResponse) => {
+          if (error.status === 404) {
+            // Handle 404 error (Not Found) differently if needed
+            console.error('Resource not found:', error);
+          }
+          return this.handleError(error);
+        })
+      );
   }
 }
