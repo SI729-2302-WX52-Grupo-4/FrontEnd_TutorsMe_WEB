@@ -12,7 +12,7 @@ export class RegisterComponent {
   birthDate: string = '';
   emailAddress: string = '';
   password: string = '';
-  users: any[] = []; // Agrega esta línea para almacenar los usuarios
+  users: any[] = [];
   showTable: boolean = false;
 
   constructor(private userService:UserService) {
@@ -27,13 +27,12 @@ export class RegisterComponent {
       password: this.password
     }
 
-    console.log('Datos del profesor:',nuevoUser);
+    console.log('Datos del usuario:',nuevoUser);
 
     this.userService.createUser(nuevoUser).subscribe(
       (response: any) => {
         console.log('user:', response);
         this.userService = response;
-        //this.users.push(response);
         this.showTable = false;
 
       },

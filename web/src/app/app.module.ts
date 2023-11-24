@@ -35,6 +35,7 @@ import { SesionesComponent } from './public/pages/sesiones/sesiones.component';
 import {ProfesoresComponent, SeeClassComponent} from "./public/pages/profesores/profesores.component";
 import {MatPaginator, MatPaginatorModule} from "@angular/material/paginator";
 import {MatDialogModule} from "@angular/material/dialog";
+import { PerfilComponent } from './public/pages/perfil/perfil.component';
 
 
 
@@ -54,7 +55,8 @@ import {MatDialogModule} from "@angular/material/dialog";
         CardComponent,
         RegisterComponent,
         SesionesComponent,
-        SeeClassComponent
+        SeeClassComponent,
+        PerfilComponent
     ],
     imports: [
         BrowserModule,

@@ -9,6 +9,7 @@ import {ProfesoresComponent} from "./public/pages/profesores/profesores.componen
 //new
 import { RegisterComponent } from './public/pages/register/register.component';
 import {SesionesComponent} from "./public/pages/sesiones/sesiones.component";
+import {PerfilComponent} from "./public/pages/perfil/perfil.component";
 
 const routes: Routes = [
   {path: 'home', component: HomeComponent},
@@ -18,6 +19,7 @@ const routes: Routes = [
   {path: 'profesores', component: ProfesoresComponent},
   {path: 'register', component: RegisterComponent},
   {path: 'login', component: AboutComponent},
+  {path: 'perfil', component: PerfilComponent},
   {path: '', redirectTo: 'login', pathMatch: 'full'},
   {path: '**', component: PageNotFoundComponent}
 

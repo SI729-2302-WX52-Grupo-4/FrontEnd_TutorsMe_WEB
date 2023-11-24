@@ -13,11 +13,9 @@ export class AboutComponent {
   constructor(private userService: UserService, private router: Router) {
   }
   login() {
-
     this.userService.logIn({emailAddress: this.username, password: this.password}).subscribe((response:any)=>{
       this.router.navigate(['home']).then();
     })
-
   }
 }
 
