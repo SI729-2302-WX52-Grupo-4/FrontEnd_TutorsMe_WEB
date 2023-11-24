@@ -32,8 +32,9 @@ import { CalendarComponent } from './Inicio/components/calendar/calendar.compone
 import { CardComponent } from './inicio/components/card/card.component';
 import { RegisterComponent } from './public/pages/register/register.component';
 import { SesionesComponent } from './public/pages/sesiones/sesiones.component';
-import {ProfesoresComponent} from "./public/pages/profesores/profesores.component";
+import {ProfesoresComponent, SeeClassComponent} from "./public/pages/profesores/profesores.component";
 import {MatPaginator, MatPaginatorModule} from "@angular/material/paginator";
+import {MatDialogModule} from "@angular/material/dialog";
 
 
 
@@ -52,7 +53,8 @@ import {MatPaginator, MatPaginatorModule} from "@angular/material/paginator";
         AppointmentFormComponent,
         CardComponent,
         RegisterComponent,
-        SesionesComponent
+        SesionesComponent,
+        SeeClassComponent
     ],
     imports: [
         BrowserModule,
@@ -72,7 +74,7 @@ import {MatPaginator, MatPaginatorModule} from "@angular/material/paginator";
         MatPaginatorModule,
         MatNativeDateModule,
         CalendarComponent,
-
+        MatDialogModule
     ],
     providers: [AppointmentsService],
     exports: [

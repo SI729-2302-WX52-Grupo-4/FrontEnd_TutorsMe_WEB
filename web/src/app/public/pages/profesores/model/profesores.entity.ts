@@ -5,4 +5,5 @@ export interface ProfesoresEntity {
   course: string;
   description: string;
   image: string;
+  clase: string;
 }

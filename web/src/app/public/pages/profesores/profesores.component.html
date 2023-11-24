@@ -1,13 +1,14 @@
 <app-nav></app-nav>
-<div class="spacer"></div>
 
+<div class="spacer"></div>
+<p class="titulo">Profesores</p>
 <div class="search-bar">
   <input [(ngModel)]="searchQuery" placeholder="Hoy aprenderé sobre...">
   <button (click)="search()">Buscar</button>
 </div>
 
-<p class="titulo">Profesores</p>
-<p class="mat-card-subtitle">Tus favoritos</p>
+<p class="mat-card-subtitle">Tus docentes</p>
+
 
 <div class="cards-container">
   <div *ngFor="let profesor of profesores" class="card">
@@ -17,7 +18,7 @@
         <mat-card-subtitle>Profesor de {{profesor.course}}</mat-card-subtitle>
       </mat-card-header>
       <p></p>
-      <img [src]="profesor.image" alt="Image {{ profesor.id}}">
+      <img src="{{profesor.image}}" alt="Image {{ profesor.id}}">
       <mat-card-content>
         <p></p>
         <p>{{profesor.description}}</p>
@@ -27,7 +28,7 @@
 
       <mat-card-actions>
         <button mat-button>Like <mat-icon style="color: black"> favorite </mat-icon> </button>
-        <button mat-button>Class <mat-icon style="color: black"> class </mat-icon> </button>
+        <button mat-button (click)="verClase(profesor.clase)">Class <mat-icon style="color: black"> class </mat-icon> </button>
       </mat-card-actions>
 
     </mat-card>
@@ -37,7 +38,7 @@
 
 <div class="spacer"></div>
 
-<p class="mat-card-subtitle">Tus docentes</p>
+<p class="mat-card-subtitle">Tus favoritos</p>
 
 <div class="cards-container">
   <div *ngFor="let profesorFav of profesoresFav" class="card">
