@@ -12,6 +12,8 @@ export class RegisterComponent {
   birthDate: string = '';
   emailAddress: string = '';
   password: string = '';
+  users: any[] = [];
+  showTable: boolean = false;
 
   constructor(private userService:UserService) {
   }
@@ -25,18 +27,14 @@ export class RegisterComponent {
       password: this.password
     }
 
-    console.log('Datos del profesor:', {
-      firstName: this.firstName,
-      lastname: this.lastname,
-      birthDate: this.birthDate,
-      emailAddress: this.emailAddress,
-      password: this.password
-    });
+    console.log('Datos del usuario:',nuevoUser);
 
     this.userService.createUser(nuevoUser).subscribe(
       (response: any) => {
         console.log('user:', response);
         this.userService = response;
+        this.showTable = false;
+
       },
       (error: any) => {
         console.error('Error fetching userservice:', error);

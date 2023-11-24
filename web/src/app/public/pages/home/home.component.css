@@ -1,3 +1,139 @@
-.section{
-  justify-content: center;
+section {
+  text-align: center;
+  font-family: 'Concert One', sans-serif;
+  background-color: #44A1A0;
+  padding: 5px; /* Ajusta el espacio interno de la sección según sea necesario */
+
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  overflow-y: auto;;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  grid-template-rows: repeat(auto-fill,minmax(200px,1fr));
+  gap: 10px;
+  justify-content: left;
+  align-items: center;
+  width: 80%;
+  max-width: 10000px;
+  margin: 0 auto;
+  border-radius: 10px;
+
 }
+.nosotros-section {
+  background-color: white;
+  padding: 20px;
+  text-align: left;
+  display: flex;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 10px;
+  width: 78%;
+  max-width: 10000px;
+  margin: 0 auto;
+}
+
+.info{
+  background-color: white;
+}
+
+.container{
+  text-align: center;
+  font-family: 'Concert One', sans-serif;
+
+  padding: 5px;
+  margin-bottom: 20px;
+  background-color: white;
+}
+.container1{
+
+  background-color: white;
+}
+
+h2 {
+  font-weight: bold;
+}
+
+h3 {
+  font-weight: bold;
+}
+
+.aboutUs-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 30px;
+
+}
+
+.aboutUs-1,
+.aboutUs-2 {
+  width: 48%;
+  margin-bottom: 20px;
+}
+
+.aboutUs-1 img,
+.aboutUs-2 img {
+  display: block;
+  margin: 0 auto;
+}
+
+.services {
+  display: flex;
+  flex-direction: column;
+}
+
+.general2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  flex: 1; /* Hace que cada sección ocupe una fracción igual del espacio disponible */
+}
+
+.img1,
+.img2,
+.general-1,
+.general-2 {
+  width: 100%; /* Cada elemento ocupa el 100% del ancho de su contenedor */
+}
+
+.img1 img,
+.img2 img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.general-1,
+.general-2 {
+  padding: 0 15px; /* Ajusta el espacio interno de los elementos según sea necesario */
+}
+
+.general-1 h2,
+.general-2 h2 {
+  font-size: 24px;
+}
+
+.general-1 p,
+.general-2 p {
+  font-size: 16px;
+}
+.general3 {
+  justify-content: center;
+  text-align: center;
+}
+
+.general3 h2{
+  font-size: 24px;
+}
+
+.general3 p {
+  font-size: 16px;
+}
+
+.aboutUs-1 h3{
+  font-size: 24px;
+}
+.aboutUs-1 p{
+  font-size: 16px;
+}
+

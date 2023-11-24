@@ -6,19 +6,23 @@ import {PageNotFoundComponent} from "./public/pages/page-not-found/page-not-foun
 import {MainContentComponent} from "./consume/components/main-content/main-content.component";
 import {AppointmentsComponent} from "./schedule/pages/appointments/appointments.component";
 import {ProfesoresComponent} from "./public/pages/profesores/profesores.component";
-//new 
+//new
 import { RegisterComponent } from './public/pages/register/register.component';
+import {SesionesComponent} from "./public/pages/sesiones/sesiones.component";
+import {PerfilComponent} from "./public/pages/perfil/perfil.component";
 
 const routes: Routes = [
   {path: 'home', component: HomeComponent},
-  {path: 'Profesores', component: MainContentComponent},
+  //{path: 'Buscador', component: MainContentComponent},
   {path: 'schedule/appointment', component: AppointmentsComponent},
-  {path: 'Buscador', component: ProfesoresComponent},
+  {path: 'sesiones', component: SesionesComponent},
+  {path: 'profesores', component: ProfesoresComponent},
   {path: 'register', component: RegisterComponent},
-  {path: 'about', component: AboutComponent},
-  {path: '', redirectTo: 'home', pathMatch: 'full'},
+  {path: 'login', component: AboutComponent},
+  {path: 'perfil', component: PerfilComponent},
+  {path: '', redirectTo: 'login', pathMatch: 'full'},
   {path: '**', component: PageNotFoundComponent}
- 
+
 
 ];
 
