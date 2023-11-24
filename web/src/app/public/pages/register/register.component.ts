@@ -13,6 +13,7 @@ export class RegisterComponent {
   emailAddress: string = '';
   password: string = '';
   users: any[] = []; // Agrega esta línea para almacenar los usuarios
+  showTable: boolean = false;
 
   constructor(private userService:UserService) {
   }
@@ -32,7 +33,9 @@ export class RegisterComponent {
       (response: any) => {
         console.log('user:', response);
         this.userService = response;
-        this.users.push(response);
+        //this.users.push(response);
+        this.showTable = false;
+
       },
       (error: any) => {
         console.error('Error fetching userservice:', error);
@@ -48,6 +51,7 @@ export class RegisterComponent {
         console.log('user:', response);
         this.userService = response;
         this.users = response;
+        this.showTable = true;
       },
       (error: any) => {
         console.error('Error fetching userservice:', error);

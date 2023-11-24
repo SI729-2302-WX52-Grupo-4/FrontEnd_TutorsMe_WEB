@@ -11,19 +11,18 @@ export class UserService extends HttpService<UserEntity>{
 
   constructor(http:HttpClient) {
     super(http);
-    this.resourceEndpoint = '/user/new';
+    this.resourceEndpoint = '/users';
   }
 
   createUser(item: any) {
-    return this.http.post<UserService>(this.resourcePath(),
+    return this.http.post<UserService>(`${this.resourcePath()}/new`,
       JSON.stringify(item), this.httpOptions)
       .pipe(retry(2), catchError(this.handleError));
   }
 
 
   getAllUser(): Observable<UserService> {
-    this.resourceEndpoint = '/users';
-    return this.http.get<UserService>(this.resourcePath(), this.httpOptions)
+    return this.http.get<UserService>(`${this.resourcePath()}/users`, this.httpOptions)
       .pipe(
         retry(2),
         catchError((error: HttpErrorResponse) => {
@@ -34,5 +33,11 @@ export class UserService extends HttpService<UserEntity>{
           return this.handleError(error);
         })
       );
+  }
+
+  logIn(item: any) {
+    return this.http.post<UserService>(`${this.resourcePath()}/login`,
+       item, this.httpOptions)
+      .pipe(retry(2), catchError(this.handleError));
   }
 }

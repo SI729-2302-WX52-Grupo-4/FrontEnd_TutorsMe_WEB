@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import {UserService} from "../register/services/user.service";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-about',
@@ -8,15 +10,14 @@ import { Component } from '@angular/core';
 export class AboutComponent {
   username: string = '';
   password: string = '';
-
+  constructor(private userService: UserService, private router: Router) {
+  }
   login() {
-    // Aquí puedes agregar la lógica de autenticación, por ejemplo, verificar las credenciales en un servicio.
-    if (this.username === 'usuario' && this.password === 'contraseña') {
-      // Redirige al usuario a la página de inicio después del inicio de sesión exitoso.
-      // Puedes usar Angular Router para esto.
-    } else {
-      alert('Credenciales incorrectas. Por favor, inténtelo de nuevo.');
-    }
+
+    this.userService.logIn({emailAddress: this.username, password: this.password}).subscribe((response:any)=>{
+      this.router.navigate(['home']).then();
+    })
+
   }
 }
 

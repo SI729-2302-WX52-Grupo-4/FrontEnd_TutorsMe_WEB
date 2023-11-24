@@ -15,7 +15,7 @@ const routes: Routes = [
   //{path: 'Buscador', component: MainContentComponent},
   {path: 'schedule/appointment', component: AppointmentsComponent},
   {path: 'sesiones', component: SesionesComponent},
-  {path: 'Profesores', component: ProfesoresComponent},
+  {path: 'profesores', component: ProfesoresComponent},
   {path: 'register', component: RegisterComponent},
   {path: 'about', component: AboutComponent},
   {path: '', redirectTo: 'about', pathMatch: 'full'},

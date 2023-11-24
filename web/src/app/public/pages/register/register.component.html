@@ -33,7 +33,7 @@
 
 <button (click)="getAllUser()">Obtener Todos los Usuarios</button>
 <!-- Tabla para mostrar los usuarios -->
-<table *ngIf="users.length > 0">
+<table *ngIf="showTable && users.length > 0">
   <thead>
   <tr>
     <th>Nombre</th>
