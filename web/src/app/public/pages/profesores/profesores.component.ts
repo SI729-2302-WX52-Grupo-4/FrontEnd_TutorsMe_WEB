@@ -1,49 +1,59 @@
-import {Component, OnInit} from '@angular/core';
-import {MatGridListModule} from '@angular/material/grid-list';
-import {MatIconModule} from "@angular/material/icon";
-import {MatButtonModule} from '@angular/material/button';
-import {MatCardModule} from '@angular/material/card';
+import {Component, Inject, OnInit} from '@angular/core';
 import {ProfesoresService} from "./services/profesores.service";
 import {ProfesoresEntity} from "./model/profesores.entity";
-import {NgForOf} from "@angular/common";
 import {ProfesoresFavEntity} from "./model/profesoresFav.entity";
-import {ProfesoresFavService} from "./services/profesores-fav.service";
+import {SearchService} from "../../../consume/services/search.service";
+import {MAT_DIALOG_DATA, MatDialog, MatDialogConfig, MatDialogRef} from "@angular/material/dialog";
 
 @Component({
-  selector: 'app-home',
+  selector: 'app-profesores',
   templateUrl: './profesores.component.html',
   styleUrls: ['./profesores.component.css'],
-  standalone: true,
-  imports: [MatGridListModule, MatIconModule, MatCardModule, MatButtonModule, NgForOf],
 })
 export class ProfesoresComponent implements OnInit{
   profesores:Array<ProfesoresEntity>=[]
   profesoresFav:Array<ProfesoresFavEntity>=[]
-  constructor(private profesorService:ProfesoresService, private profesorFavService:ProfesoresFavService) {
+
+  searchQuery: string = '';
+
+  constructor(private searchService: SearchService, private profesorService:ProfesoresService,
+              private dialog: MatDialog) {
   }
 
-  ngOnInit(): void {
-    this.profesorService.getAll().subscribe(
-      (response: any) => {
-        console.log('Profesores:', response);
-        this.profesores = response;
-      },
-      (error: any) => {
-        console.error('Error fetching Profesores:', error);
-      }
-    );
-
-    this.profesorFavService.getAll().subscribe(
-      (response: any) => {
-        console.log('Profesores Favoritos:', response);
-        this.profesoresFav = response;
-      },
-      (error: any) => {
-        console.error('Error fetching Profesores Favoritos:', error);
-      }
-    );
+  ngOnInit() {
+    this.profesorService.getAll().subscribe((response: any) => {
+      this.profesores = response;
+    });
   }
 
+  search(): void {
+    this.profesores = this.profesores.filter(profesor => profesor.name === this.searchQuery);
+  }
+
+  verClase(clase: string): void {
+    const dialogConfig = new MatDialogConfig();
+    dialogConfig.disableClose = true;
+    dialogConfig.data = clase;
+
+    const dialogRef = this.dialog.open(SeeClassComponent, dialogConfig);
+
+    dialogRef.afterClosed().subscribe(() => {
+
+    });
+  }
 }
 
+@Component({
+  selector: 'app-see-class',
+  templateUrl: '/dialog/get-class.html'
+})
+export class SeeClassComponent {
+  constructor(
+    public dialogRef: MatDialogRef<SeeClassComponent>,
+    @Inject(MAT_DIALOG_DATA) public data: string,
+  ) {}
 
+  close() {
+    this.dialogRef.close();
+  }
+}

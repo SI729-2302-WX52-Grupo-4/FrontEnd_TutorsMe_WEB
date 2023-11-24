@@ -31,43 +31,57 @@ import { AppointmentFormComponent } from './schedule/components/appointment-form
 import { CalendarComponent } from './Inicio/components/calendar/calendar.component';
 import { CardComponent } from './inicio/components/card/card.component';
 import { RegisterComponent } from './public/pages/register/register.component';
+import { SesionesComponent } from './public/pages/sesiones/sesiones.component';
+import {ProfesoresComponent, SeeClassComponent} from "./public/pages/profesores/profesores.component";
+import {MatPaginator, MatPaginatorModule} from "@angular/material/paginator";
+import {MatDialogModule} from "@angular/material/dialog";
+import { PerfilComponent } from './public/pages/perfil/perfil.component';
 
 
 
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    FooterContentComponent,
-    MainContentComponent,
-    NavComponent,
-    AboutComponent,
-    HomeComponent,
-    PageNotFoundComponent,
-    AppointmentsComponent,
-    AppointmentFormComponent,
-    CardComponent,
-    RegisterComponent,
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    HttpClientModule,
-    MatIconModule,
-    MatDividerModule,
-    MatButtonModule,
-    MatToolbarModule,
-    MatTableModule,
-    MatFormFieldModule,
-    FormsModule,
-    MatInputModule,
-    MatCardModule,
-    MatDatepickerModule,
-    MatNativeDateModule,
-    CalendarComponent
-  ],
-  providers: [AppointmentsService],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        FooterContentComponent,
+        MainContentComponent,
+        NavComponent,
+        AboutComponent,
+        HomeComponent,
+        PageNotFoundComponent,
+        ProfesoresComponent,
+        AppointmentsComponent,
+        AppointmentFormComponent,
+        CardComponent,
+        RegisterComponent,
+        SesionesComponent,
+        SeeClassComponent,
+        PerfilComponent
+    ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        BrowserAnimationsModule,
+        HttpClientModule,
+        MatIconModule,
+        MatDividerModule,
+        MatButtonModule,
+        MatToolbarModule,
+        MatTableModule,
+        MatFormFieldModule,
+        FormsModule,
+        MatInputModule,
+        MatCardModule,
+        MatDatepickerModule,
+        MatPaginatorModule,
+        MatNativeDateModule,
+        CalendarComponent,
+        MatDialogModule
+    ],
+    providers: [AppointmentsService],
+    exports: [
+        NavComponent
+    ],
+    bootstrap: [AppComponent]
 })
 export class AppModule { }
