@@ -42,21 +42,4 @@ export class RegisterComponent {
       }
     );
   }
-
-
-  getAllUser()
-  {
-    this.userService.getAllUser().subscribe(
-      (response: any) => {
-        console.log('user:', response);
-        this.userService = response;
-        this.users = response;
-        this.showTable = true;
-      },
-      (error: any) => {
-        console.error('Error fetching userservice:', error);
-      }
-    );
-
-  }
 }

@@ -1,6 +1,6 @@
 <!-- register.component.html -->
 <div class="register-container">
-    <h2>Registro de Profesor</h2>
+    <h2>Registro de Usuario</h2>
     <form (ngSubmit)="register()" #registerForm="ngForm">
         <div class="form-group">
             <label for="firstName">Nombre:</label>
@@ -29,25 +29,3 @@
         <button type="submit" [disabled]="!registerForm.form.valid">Registrar Profesor</button>
     </form>
 </div>
-<!-- Botón para obtener todos los usuarios -->
-
-<button (click)="getAllUser()">Obtener Todos los Usuarios</button>
-<!-- Tabla para mostrar los usuarios -->
-<table *ngIf="showTable && users.length > 0">
-  <thead>
-  <tr>
-    <th>Nombre</th>
-    <th>Apellido</th>
-    <th>Fecha de Nacimiento</th>
-    <th>Correo Electrónico</th>
-  </tr>
-  </thead>
-  <tbody>
-  <tr *ngFor="let user of users">
-    <td>{{ user.firstName }}</td>
-    <td>{{ user.lastname }}</td>
-    <td>{{ user.birthDate }}</td>
-    <td>{{ user.emailAddress }}</td>
-  </tr>
-  </tbody>
-</table>

@@ -17,8 +17,8 @@ const routes: Routes = [
   {path: 'sesiones', component: SesionesComponent},
   {path: 'profesores', component: ProfesoresComponent},
   {path: 'register', component: RegisterComponent},
-  {path: 'about', component: AboutComponent},
-  {path: '', redirectTo: 'about', pathMatch: 'full'},
+  {path: 'login', component: AboutComponent},
+  {path: '', redirectTo: 'login', pathMatch: 'full'},
   {path: '**', component: PageNotFoundComponent}
 
 
