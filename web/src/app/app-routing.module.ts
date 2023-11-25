@@ -12,14 +12,14 @@ import {SesionesComponent} from "./public/pages/sesiones/sesiones.component";
 import {PerfilComponent} from "./public/pages/perfil/perfil.component";
 
 const routes: Routes = [
-  {path: 'home', component: HomeComponent},
+  {path: 'home/:id', component: HomeComponent},
   //{path: 'Buscador', component: MainContentComponent},
-  {path: 'schedule/appointment', component: AppointmentsComponent},
-  {path: 'sesiones', component: SesionesComponent},
-  {path: 'profesores', component: ProfesoresComponent},
+  {path: 'schedule/appointment/:id', component: AppointmentsComponent},
+  {path: 'sesiones/:id', component: SesionesComponent},
+  {path: 'profesores/:id', component: ProfesoresComponent},
   {path: 'register', component: RegisterComponent},
   {path: 'login', component: AboutComponent},
-  {path: 'perfil', component: PerfilComponent},
+  {path: 'perfil/:id', component: PerfilComponent},
   {path: '', redirectTo: 'login', pathMatch: 'full'},
   {path: '**', component: PageNotFoundComponent}
 

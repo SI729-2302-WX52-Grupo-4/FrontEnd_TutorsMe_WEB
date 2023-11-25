@@ -20,6 +20,11 @@ export class UserService extends HttpService<UserEntity>{
       .pipe(retry(2), catchError(this.handleError));
   }
 
+  getById(id: any) {
+    return this.http.get<UserService>(`${this.resourcePath()}/${id}`, this.httpOptions)
+      .pipe(retry(2), catchError(this.handleError));
+  }
+
 
   getAllUser(): Observable<UserService> {
     return this.http.get<UserService>(`${this.resourcePath()}/users`, this.httpOptions)

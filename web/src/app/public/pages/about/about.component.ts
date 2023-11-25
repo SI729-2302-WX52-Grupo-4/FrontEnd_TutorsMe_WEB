@@ -14,7 +14,7 @@ export class AboutComponent {
   }
   login() {
     this.userService.logIn({emailAddress: this.username, password: this.password}).subscribe((response:any)=>{
-      this.router.navigate(['home']).then();
+      this.router.navigate(['home', response.id]).then();
     })
   }
 }
